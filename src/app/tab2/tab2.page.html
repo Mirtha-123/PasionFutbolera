@@ -1,0 +1,51 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Simulacion
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+
+<ion-content>
+  <ion-list>
+  <ion-header class="headw">
+    <h3>Totales</h3>
+  </ion-header>
+  <ion-item *ngFor="let x of reglasuma" color="secondary">
+    <ion-label><h2>Regla:{{x.regla}}</h2><h3>Cuantos veces se activo:{{x.activacion}} </h3> <h4>Monto ganado:{{x.jugar}} </h4></ion-label> 
+  </ion-item>
+ 
+</ion-list>
+<ion-list>
+  <ion-header>
+    Goleados
+  </ion-header>
+  <ion-item *ngFor="let x of goleados" color="primary">
+    <ion-label><p>GOLES:{{ x.ahorrado }} por anotar {{ x.goles }} contra {{ x.contra }} el día {{ x.fecha | date }}  </p> </ion-label> 
+  </ion-item>
+ 
+</ion-list>
+<ion-list>
+  <ion-header>
+    Ganados
+  </ion-header>
+  <ion-item *ngFor="let x of ganados" color="success">
+    <ion-label>GANAR: {{ x.ahorrado }} ahorrado por ganar contra {{ x.contra }} el día {{ x.fecha | date }}</ion-label> 
+  </ion-item>
+ 
+</ion-list>
+<ion-list>
+  <ion-header>
+    Jugados
+  </ion-header>
+  <ion-item *ngFor="let x of jugados" color="warning">
+    <ion-label>JUGAR: {{ x.ahorrado }} ahorrado por ganar contra {{ x.contra }} el día {{ x.fecha | date }}</ion-label> 
+  </ion-item>
+ 
+</ion-list>
+</ion-content>
+
+</ion-content>

@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Regla Edicion Pasion Futbolera</ion-title>
+    <ion-buttons slot="start">
+    	<ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-list>
+  <ion-list-header>
+    <ion-label>
+      
+    </ion-label>
+  </ion-list-header>
+
+
+  <ion-item>
+    <ion-label>Equipo</ion-label>
+    <ion-select value="1" okText="Elegir" cancelText="Cancelar" name="tipo1" [(ngModel)]="futbolero">
+      <ion-select-option [value]="x" *ngFor="let x of equipos1">{{x.shortName}}</ion-select-option>
+     
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label>Evento</ion-label>
+    <ion-select value="1" okText="Elegir" cancelText="Cancelar" name="tipo1" [(ngModel)]="edicion.evento">
+      <ion-select-option value="9">Jugar</ion-select-option>
+      <ion-select-option value="8">Ganar</ion-select-option>
+      <ion-select-option value="7">Por cada Gol</ion-select-option>
+      
+    </ion-select>
+  </ion-item>
+
+<ion-item>
+  <ion-label position="fixed">Monto a Ahorrar $</ion-label>
+  <ion-input type="number" name="monto1" min="0" pattern="^[0-9]+" [(ngModel)]="edicion.monto"></ion-input>
+</ion-item>
+<ion-button expand="full" color="tertiary" (click)="actualizar()">Editar</ion-button>
+</ion-list>
+</ion-content>

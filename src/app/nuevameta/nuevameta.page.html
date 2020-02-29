@@ -1,0 +1,46 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Nueva Meta 
+      <ion-buttons slot="start">
+    	<ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+
+<ion-content>
+<ion-list>
+  <ion-list-header>
+    <ion-label>
+      
+    </ion-label>
+  </ion-list-header>
+
+
+  <ion-item>
+    <ion-label>Tipo de Meta</ion-label>
+    <ion-select value="1" okText="Elegir" cancelText="Cancelar" name="tipo" [(ngModel)]="meta.tipo" >
+      <ion-select-option value="1">Comprar Algo</ion-select-option>
+      <ion-select-option value="2">Viajar</ion-select-option>
+      <ion-select-option value="3">Hacer Algo</ion-select-option>
+      <ion-select-option value="4">Solo Ahorrar</ion-select-option>
+    </ion-select>
+  </ion-item>
+ <ion-item>
+  <ion-label position="floating">MM/DD/YYYY</ion-label>
+  <ion-datetime displayFormat="MMMM/DD" [min]="periodo" name="date" [(ngModel)]="ayuda" ></ion-datetime>
+</ion-item>
+<ion-item>
+  <ion-label position="fixed">Monto a Ahorrar</ion-label>
+  <ion-input type="number" name="monto" min="0" pattern="^[0-9]+" [(ngModel)]="meta.monto"></ion-input>
+</ion-item>
+<ion-button expand="full" color="tertiary" (click)="guardar()">Guardar</ion-button>
+
+</ion-list>
+</ion-content>
+
+</ion-content>

@@ -1,0 +1,8 @@
+{
+  "name": "ubank",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular",
+  "id": "916267a3"
+}

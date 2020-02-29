@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>modal</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-list>
+  <ion-list-header>
+    <ion-label>
+      <h3>Crear Meta</h3>
+    </ion-label>
+  </ion-list-header>
+
+
+  <ion-item>
+    <ion-label>Tipo de Meta</ion-label>
+    <ion-select value="1" okText="Elegir" cancelText="Cancelar" name="tipo" [(ngModel)]="meta.tipo">
+      <ion-select-option value="1">Comprar Algo</ion-select-option>
+      <ion-select-option value="2">Viajar</ion-select-option>
+      <ion-select-option value="3">Hacer Algo</ion-select-option>
+      <ion-select-option value="4">Solo Ahorrar</ion-select-option>
+    </ion-select>
+  </ion-item>
+ <ion-item>
+  <ion-label position="floating">MM/DD/YYYY</ion-label>
+  <ion-datetime displayFormat="MMMM/DD" [min]="periodo" name="date" [(ngModel)]="meta.fecha" ></ion-datetime>
+</ion-item>
+<ion-item>
+  <ion-label position="fixed">Monto a Ahorrar</ion-label>
+  <ion-input type="number" name="monto" [(ngModel)]="meta.monto"></ion-input>
+</ion-item>
+<ion-button expand="full" color="tertiary" (click)="guardar()">Guardar</ion-button>
+</ion-list>
+</ion-content>
